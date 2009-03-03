@@ -19,13 +19,12 @@ PLD-LiveCD KDE4 splash screen.
 Splash do PLD-LiveCD z KDE4.
 
 %prep
-%setup -q -c
+%setup -qc
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_datadir}/apps/ksplash/Themes
-cp -ar LiveCD $RPM_BUILD_ROOT%{_datadir}/apps/ksplash/Themes/
+cp -a LiveCD $RPM_BUILD_ROOT%{_datadir}/apps/ksplash/Themes/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
